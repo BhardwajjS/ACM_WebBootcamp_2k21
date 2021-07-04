@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/gallery1.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <title>University</title>
+</head>
+<body>
+ 
+  <nav class="navbar navbar-inverse navbar-fixed-top navbar-right navbar-expand-lg ">
+    <div class="container-fluid">
+      <div class="navbar-header" >
+        <a class="navbar-brand" href="#">Sunshine University</a>
+      </div>
+      <ul class="navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="index.html#map">Map</a></li>
+        <li><a href="./images/bg.jpg">Visit</a></li>
+        <li><a href="Event.html">Events</a></li>
+        <li><a href="Student.html">Student Portal</a></li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>     
+
+    <section id="gallery">
+    <div class="row">
+        <div class="column">
+          <img src="./images/1.jpg">
+          <img src="./images/2.jpg">
+          <img src="./images/3.jpg">
+          <img src="./images/4.jpg">
+          
+        </div>
+        <div class="column">
+            <img src="./images/8.jpg">
+          <img src="./images/3.jpg">
+          <img src="./images/10.jpg">
+          <img src="./images/11.jpg">
+         >
+        </div>
+        <div class="column">
+            <div class="column">
+          <img src="./images/1.jpg">
+          <img src="./images/5.jpg">
+          <img src="./images/6.jpg">
+          <img src="./images/7.jpg">
+        </div>
+        <div class="column">
+            <img src="./images/8.jpg">
+          <img src="./images/3.jpg">
+          <img src="./images/10.jpg">
+          <img src="./images/11.jpg">
+         
+        </div>
+      </div>
+    </section>
+    <div class="modal">
+        <div class="close"><i class="fa fa-times"></i></div>
+      </div>
+      <script
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"
+      ></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script>
+        // $(document).ready(function(){
+  
+        // })
+        $(window).load(function () {
+          $("section img").click(function () {
+            $(".modal").fadeIn(300);
+            var src = $(this).attr("src");
+            $(".modal").append("<img src='" + src + "'>");
+            $("html").css("overflow", "none");
+            $("#gallery").css("pointerEvents", "none");
+            $("#gallery").css("filter", "blur(5px)");
+          });
+          $(".close").click(function () {
+            $(".modal img").remove();
+            $(".modal").fadeOut(300);
+            $("html").css("overflow", "auto");
+            $("#gallery").css("pointerEvents", "auto");
+            $("#gallery").css("filter", "blur(0px)");
+          });
+        });
+      </script>
+      <!-- footer -->
+  <footer >
+    <div class="content">
+      <div class="left box">
+        <div class="upper">
+          <div class="topic">Explore</div>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur ipsam animi ea, eaque repellendus fugit tempore minus quod repellat odit voluptates quibusdam possimus magnam voluptas quasi reprehenderit explicabo rerum quo?</p>
+        </div>
+        <div class="lower">
+          <div class="topic">Contact us</div>
+          <div class="phone">
+            <a href="#"><i class="fas fa-phone-volume"></i>+007 9089 6767</a>
+          </div>
+          <div class="email">
+            <a href="#"><i class="fas fa-envelope"></i>Sunshine@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="middle box">
+        <div class="topic">Departments</div>
+        <div><a href="#">Computer Applications</a></div>
+        <div><a href="#">Mass Communication</a></div>
+        <div><a href="#">Nursing</a></div>
+        <div><a href="#">Physiotheraphy</a></div>
+        <div><a href="#">Mechanical Engineering</a></div>
+        <div><a href="#">Architecture</a></div>
+      </div>
+      <div class="right box">
+        <div class="topic">For any Queries</div>
+        <form action="#">
+          <input type="text" placeholder="Enter email address">
+          <input type="submit" name="" value="Send">
+          <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></i></a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="bottom">
+      <p>Copyright © 2020 <a href="#">Sunshine University</a> All rights reserved</p>
+    </div>
+  </footer>
+</body>
+</html>
